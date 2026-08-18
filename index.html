@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinguim</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(#8fd3ff, #e9f8ff);
+      overflow: hidden;
+    }
+
+    .scene {
+      position: relative;
+      width: 320px;
+      height: 420px;
+    }
+
+    /* Neve */
+    .snow {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 90px;
+      background: white;
+      border-radius: 50% 50% 0 0;
+    }
+
+    /* Pinguim */
+    .penguin {
+      position: absolute;
+      left: 70px;
+      bottom: 45px;
+      width: 180px;
+      height: 300px;
+      background: #20252b;
+      border-radius: 50% 50% 45% 45%;
+    }
+
+    /* Barriga */
+    .belly {
+      position: absolute;
+      left: 32px;
+      top: 75px;
+      width: 116px;
+      height: 185px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    /* Olhos */
+    .eye {
+      position: absolute;
+      top: 55px;
+      width: 18px;
+      height: 18px;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .eye::after {
+      content: "";
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      background: #111;
+      border-radius: 50%;
+      top: 5px;
+      left: 6px;
+    }
+
+    .eye.left {
+      left: 48px;
+    }
+
+    .eye.right {
+      right: 48px;
+    }
+
+    /* Bico */
+    .beak {
+      position: absolute;
+      top: 83px;
+      left: 75px;
+      width: 0;
+      height: 0;
+      border-left: 17px solid transparent;
+      border-right: 17px solid transparent;
+      border-top: 28px solid #f5a623;
+    }
+
+    /* Asas */
+    .wing {
+      position: absolute;
+      top: 125px;
+      width: 55px;
+      height: 145px;
+      background: #171b20;
+      border-radius: 50%;
+    }
+
+    .wing.left {
+      left: -32px;
+      transform: rotate(18deg);
+    }
+
+    .wing.right {
+      right: -32px;
+      transform: rotate(-18deg);
+    }
+
+    /* Pés */
+    .foot {
+      position: absolute;
+      bottom: -25px;
+      width: 70px;
+      height: 35px;
+      background: #f5a623;
+      border-radius: 50%;
+    }
+
+    .foot.left {
+      left: 15px;
+    }
+
+    .foot.right {
+      right: 15px;
+    }
+
+    /* Flocos de neve */
+    .flake {
+      position: absolute;
+      color: white;
+      font-size: 25px;
+      animation: cair 5s linear infinite;
+    }
+
+    .f1 { left: 20px; top: 20px; }
+    .f2 { left: 250px; top: 70px; animation-delay: 1s; }
+    .f3 { left: 160px; top: 10px; animation-delay: 2s; }
+    .f4 { left: 290px; top: 170px; animation-delay: 3s; }
+
+    @keyframes cair {
+      from {
+        transform: translateY(-20px);
+      }
+      to {
+        transform: translateY(380px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="scene">
+
+    <div class="flake f1">❄</div>
+    <div class="flake f2">❄</div>
+    <div class="flake f3">❄</div>
+    <div class="flake f4">❄</div>
+
+    <div class="penguin">
+
+      <div class="belly"></div>
+
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+
+      <div class="beak"></div>
+
+      <div class="wing left"></div>
+      <div class="wing right"></div>
+
+      <div class="foot left"></div>
+      <div class="foot right"></div>
+
+    </div>
+
+    <div class="snow"></div>
+
+  </div>
+
+</body>
+</html>
+
