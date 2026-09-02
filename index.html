@@ -41,68 +41,48 @@
     </div>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinguim-de-Adélia</title>
+<div class="cartao-pinguim">
+    <h2>🐧 Pinguim-de-Adélia</h2>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <p>
+        O pinguim-de-Adélia é uma espécie encontrada
+        principalmente nas regiões costeiras da Antártida.
+        Ele é um excelente nadador e se alimenta principalmente
+        de krill e pequenos peixes.
+    </p>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #dff3ff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+    <div class="dados-pinguim">
+        <p><strong>Nome científico:</strong> Pygoscelis adeliae</p>
+        <p><strong>Habitat:</strong> Antártida</p>
+        <p><strong>Alimentação:</strong> Krill e peixes</p>
+    </div>
+</div>
+.cartao-pinguim {
+    background: #ffffff;
+    width: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
 
-        .cartao {
-            width: 320px;
-            background: white;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
+.cartao-pinguim h2 {
+    color: #164b6b;
+    margin-top: 0;
+}
 
-        .cartao:hover {
-            transform: translateY(-8px);
-        }
+.cartao-pinguim p {
+    line-height: 1.5;
+}
 
-        .cartao img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.dados-pinguim {
+    background: #e8f6fc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
 
-        .conteudo {
-            padding: 20px;
-        }
-
-        .conteudo h2 {
-            color: #183b56;
-            margin-bottom: 10px;
-        }
-
-        .conteudo p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .informacoes {
-            background: #eef8fc;
-            padding: 12px;
-            border-radius: 10px;
-            font-size: 14px;
-            color: #234;
-        }
-        
+.dados-pinguim p {
+    margin: 7px 0;
+}
