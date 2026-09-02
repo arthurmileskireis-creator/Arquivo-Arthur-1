@@ -41,3 +41,68 @@
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinguim-de-Adélia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #dff3ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .cartao {
+            width: 320px;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .cartao:hover {
+            transform: translateY(-8px);
+        }
+
+        .cartao img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .conteudo {
+            padding: 20px;
+        }
+
+        .conteudo h2 {
+            color: #183b56;
+            margin-bottom: 10px;
+        }
+
+        .conteudo p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .informacoes {
+            background: #eef8fc;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #234;
+        }
+        
